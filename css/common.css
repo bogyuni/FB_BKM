@@ -6,8 +6,8 @@
 	font-weight: 400;
 	font-display: auto;
 	src: local('Helvetica'),
-		url('/css/Helvetica.woff2') format('woff2'),
-		url('/css/Helvetica.ttf') format('truetype');
+		url('./css/Helvetica.woff2') format('woff2'),
+		url('./css/Helvetica.ttf') format('truetype');
 }
 
 * {padding:0;margin:0;}
