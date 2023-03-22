@@ -4,19 +4,21 @@ window.addEventListener('DOMContentLoaded', function(){
 	console.log(window.location);
 
 	let pathName = window.location.pathname;
-	let root = window.location.href.split(pathName)[0];
+	let menuName = '';
 
 	if (pathName.indexOf('performance') > -1) {
-		pathName = 'performance';
+		menuName = 'performance';
 	} else if (pathName.indexOf('education') > -1) {
-		pathName = 'education';
+		menuName = 'education';
 	} else if (pathName.indexOf('tickets') > -1) {
-		pathName = 'tickets';
+		menuName = 'tickets';
 	} else if (pathName.indexOf('guide') > -1) {
-		pathName = 'guide';
-	} else {
-		pathName = '';
-		root = window.location.href;
+		menuName = 'guide';
+	}
+
+	let root = window.location.href;
+	if (menuName !== '') {
+		root = window.location.href.split(menuName)[0];
 	}
 
 	console.log(pathName, root);
@@ -39,8 +41,8 @@ window.addEventListener('DOMContentLoaded', function(){
 		.then(response => { return response.text(); })
 		.then(data => {
 			document.getElementById('header').innerHTML = data;
-			if (pathName !== ''){
-				document.querySelector('.'+pathName+'-link').classList.add('on');
+			if (menuName !== ''){
+				document.querySelector('.' + menuName + '-link').classList.add('on');
 			}
 		});
 	fetch(pathFooter)
