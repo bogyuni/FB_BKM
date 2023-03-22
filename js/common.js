@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', function(){
 		pathName = 'guide';
 	} else {
 		pathName = '';
-		root = window.location.origin;
+		root = window.location.href;
 	}
 
 	console.log(pathName, root);
