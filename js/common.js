@@ -16,9 +16,10 @@ window.addEventListener('DOMContentLoaded', function(){
 		pathName = 'guide';
 	} else {
 		pathName = '';
+		root = window.location.origin;
 	}
 
-	console.log(pathName);
+	console.log(pathName, root);
 	let	pathHeader = root + '/inc/header.html';
 	let pathFooter = root + '/inc/footer.html';
 	// let	pathHeader = '../inc/header.html';
