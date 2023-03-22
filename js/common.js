@@ -1,9 +1,14 @@
 window.addEventListener('DOMContentLoaded', function(){
 	// 메인페이지와 서브페이지 include 파일 경로 설정
-	let root = window.location.origin;
+	// let root = window.location.origin;
+	let root = '..';
 	let pathName = window.location.pathname.split('/')[1];
 	let	pathHeader = root + '/inc/header.html';
 	let pathFooter = root + '/inc/footer.html';
+
+	console.log(window.location.origin);
+	console.log(window.location);
+	// console.log(window.location);
 
 	if (pathName === ''){
 		console.log('main page');
