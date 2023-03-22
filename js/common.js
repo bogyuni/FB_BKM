@@ -1,10 +1,10 @@
 window.addEventListener('DOMContentLoaded', function(){
 	// 메인페이지와 서브페이지 include 파일 경로 설정
-	// let root = window.location.origin;
 	// let pathName = window.location.pathname.split('/')[1];
 	console.log(window.location);
 
 	let pathName = window.location.pathname;
+	let root = window.location.href.split(pathName)[0];
 
 	if (pathName.indexOf('performance') > -1) {
 		pathName = 'performance';
@@ -19,17 +19,19 @@ window.addEventListener('DOMContentLoaded', function(){
 	}
 
 	console.log(pathName);
-	// let	pathHeader = root + '/inc/header.html';
-	// let pathFooter = root + '/inc/footer.html';
-	let	pathHeader = '../inc/header.html';
-	let pathFooter = '../inc/footer.html';
+	let	pathHeader = root + '/inc/header.html';
+	let pathFooter = root + '/inc/footer.html';
+	// let	pathHeader = '../inc/header.html';
+	// let pathFooter = '../inc/footer.html';
 
 	if (pathName === '') {
 		console.log('main page');
 	} else {
 		console.log('sub page');
-		pathHeader = '../inc/header_sub.html';
-		pathFooter = '../inc/footer_sub.html';
+		pathHeader = root + '/inc/header_sub.html';
+		pathFooter = root + '/inc/footer_sub.html';
+		// pathHeader = '../inc/header_sub.html';
+		// pathFooter = '../inc/footer_sub.html';
 	}
 
 	fetch(pathHeader)
