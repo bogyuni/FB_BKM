@@ -22,10 +22,10 @@ window.addEventListener('DOMContentLoaded', function(){
 	if (menuName !== '') {
 		root = window.location.href.split(menuName)[0];
 	} else {
-		root = window.location.origin;
+		root = window.location.origin+menuName;
 	}
 
-	console.log(pathName, root);
+	console.log('root : '+root, '\npathName: '+pathName, '\n'+root+pathName);
 	let	pathHeader = root + '/inc/header.html';
 	let pathFooter = root + '/inc/footer.html';
 
