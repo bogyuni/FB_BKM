@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded', function(){
 	if (menuName !== '') {
 		root = window.location.href.split(menuName)[0];
 	} else {
-		root = window.location.origin+menuName;
+		root = window.location.origin+pathName;
 	}
 
 	console.log('root : '+root, '\npathName: '+pathName, '\n'+root+pathName);
