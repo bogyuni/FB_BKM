@@ -6,8 +6,9 @@
 	font-weight: 400;
 	font-display: auto;
 	src: local('Helvetica'),
-		url('Helvetica.woff2') format('woff2'),
-		url('Helvetica.ttf') format('truetype');
+	/* url('Helvetica.woff2') format('woff2'), */
+	url('HelveticaNeueLTStd-LtEx.woff') format('woff'),
+	url('Helvetica.ttf') format('truetype');
 }
 :root {
 	--bdr: 1px solid red;
@@ -91,9 +92,9 @@ footer .logo-bottom {position: absolute;right:0;top:4px;}
 .sub-section .top-area .link-next {right: 10px;}
 
 .sub-section .board-area .board-con {padding:10px 30px 20px 110px;border-top:1px solid #00000050;}
-.sub-section .board-area .board-con .top-con > div {float: left;padding-top: 8px;}
+.sub-section .board-area .board-con .top-con > div {float: left;padding-top: 8px;cursor: pointer;}
 .sub-section .board-area .board-con .top-con::after {content: '';display: block;clear: both;}
-.sub-section .board-area .day-con {width:50px;font-size: 20px;line-height: 1;}
+.sub-section .board-area .day-con {width:50px;font-size: 20px;line-height: 1;font-family: 'Helvetica';}
 .sub-section .board-area .week-con {width:60px;font-size: 11px;}
 .sub-section .board-area .category-con {width: 130px;font-size: 11px;}
 .sub-section .board-area .category-con.brand {color: #00DB00;}
