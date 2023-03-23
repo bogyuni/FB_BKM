@@ -1,6 +1,5 @@
 window.addEventListener('DOMContentLoaded', function(){
 	// 메인페이지와 서브페이지 include 파일 경로 설정
-	// let pathName = window.location.pathname.split('/')[1];
 	console.log(window.location);
 
 	let pathName = window.location.pathname;
@@ -14,27 +13,28 @@ window.addEventListener('DOMContentLoaded', function(){
 		menuName = 'tickets';
 	} else if (pathName.indexOf('guide') > -1) {
 		menuName = 'guide';
+	} else {
+		
 	}
 
-	let root = window.location.href;
+	let root = null;
+
 	if (menuName !== '') {
 		root = window.location.href.split(menuName)[0];
+	} else {
+		root = window.location.origin;
 	}
 
 	console.log(pathName, root);
 	let	pathHeader = root + '/inc/header.html';
 	let pathFooter = root + '/inc/footer.html';
-	// let	pathHeader = '../inc/header.html';
-	// let pathFooter = '../inc/footer.html';
 
-	if (pathName === '') {
+	if (menuName === '') {
 		console.log('main page');
 	} else {
 		console.log('sub page');
 		pathHeader = root + '/inc/header_sub.html';
 		pathFooter = root + '/inc/footer_sub.html';
-		// pathHeader = '../inc/header_sub.html';
-		// pathFooter = '../inc/footer_sub.html';
 	}
 
 	fetch(pathHeader)
