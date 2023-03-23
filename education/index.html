@@ -11,35 +11,24 @@
 
 	<script src="../js/common.js"></script>
 	<script src="../js/sub.js"></script>
-
 </head>
 <body class="sub">
 <!-- /inc/header.html -->
 <header id="header"></header>
 
 
-<script>
-	const currentPageName = 'performance';
-	const currentMonth = window.location.search.split('month=')[1];
-	const path = window.location.origin + window.location.pathname;
-	// console.log(window.location.origin + window.location.pathname);
-	var head = document.getElementsByTagName('head')[0];
-	var script = document.createElement('script');
-	script.src = path+'month_'+currentMonth+'.js';
-	head.appendChild(script);
-</script>
 <main class="sub-section">
+	<div id="subTop"></div>
+	
 	<div class="top-area">
 		<div class="month-num"></div>
 		<nav class="category-menu">
 			<div class="in-wrap">
 				<button class="btn-category all" onclick="sortCategory('all', this)">전체</button>
-				<button class="btn-category brand" onclick="sortCategory('brand', this)">대표공연</button>
-				<button class="btn-category regular" onclick="sortCategory('regular', this)">정기공연</button>
-				<button class="btn-category special" onclick="sortCategory('special', this)">기획공연</button>
-				<button class="btn-category permanent" onclick="sortCategory('permanent', this)">상설공연</button>
-				<button class="btn-category seasonal" onclick="sortCategory('seasonal', this)">명절공연</button>
-				<button class="btn-category exchange" onclick="sortCategory('exchange', this)">교류공연</button>
+				<button class="btn-category type1" onclick="sortCategory('type1', this)">교육전문가</button>
+				<button class="btn-category type2" onclick="sortCategory('type2', this)">일반인</button>
+				<button class="btn-category type3" onclick="sortCategory('type3', this)">청소년</button>
+				<button class="btn-category type4" onclick="sortCategory('type4', this)">외국인</button>
 			</div>
 		</nav>
 		<a class="link-month link-prev" href=""><img src="../images/common/btn_prev.png" alt="prev month"></a>
