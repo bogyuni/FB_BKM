@@ -18,11 +18,15 @@ window.addEventListener('DOMContentLoaded', function(){
 	// 서브페이지일 경우 루트 경로 설정
 	if (menuName !== '') {
 		root = window.location.href.split(menuName)[0];
+	
+	// 메인 페이지일 경우, index.html로 참조를 할 경우
 	} else {
 		if (pathName.indexOf('index') > 0) {
 			pathName = pathName.split('/index')[0];
 		}
 		root = window.location.origin + pathName;
+		mainIntro();
+
 	}
 
 	// 인크루트 파일 경로
@@ -56,9 +60,16 @@ window.addEventListener('DOMContentLoaded', function(){
 		.then(data => { document.getElementById('footer').innerHTML = data; });
 });
 
+window.addEventListener('load', function(){
+});
+
 function openGnb(){
 	document.querySelector('.mo-menu').classList.add('on');
 }
 function closeGnb(){
 	document.querySelector('.mo-menu').classList.remove('on');
+}
+
+function mainIntro(){
+	document.querySelector('.main-section').classList.add('on');
 }
