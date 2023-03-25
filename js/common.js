@@ -37,13 +37,9 @@ window.addEventListener('DOMContentLoaded', function(){
 	if (menuName === '') {
 		// console.log('main page');
 	} else {
-		// console.log('sub page');
 		pathHeader = root + '/inc/header_sub.html';
 		pathFooter = root + '/inc/footer_sub.html';
 	}
-
-	// console.log('root : '+root, '\npathName: '+pathName, '\n'+root+pathName);
-	// console.log(window.location);
 
 	// 인크루트 파일 로드
 	fetch(pathHeader)
@@ -58,9 +54,18 @@ window.addEventListener('DOMContentLoaded', function(){
 	fetch(pathFooter)
 		.then(response => { return response.text(); })
 		.then(data => { document.getElementById('footer').innerHTML = data; });
+
+
 });
 
 window.addEventListener('load', function(){
+	const checkENG = window.location.pathname.indexOf('/en/') > -1;
+	if (checkENG === true) {
+		let imgTag = document.getElementsByTagName('img');
+		for (let i = 0; i < imgTag.length; i++) {
+			imgTag[i].src = imgTag[i].src.split('/en')[0] + imgTag[i].src.split('/en')[1];
+		}
+	}
 });
 
 function openGnb(){

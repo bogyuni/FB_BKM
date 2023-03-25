@@ -22,7 +22,6 @@ function boardConClickSet() {
 	}
 }
 
-
 function boardConDomSet() {
 	const boardList = document.getElementById('boardList');
 	let boardConDom = [];
@@ -30,6 +29,10 @@ function boardConDomSet() {
 	let boardType = '';
 	let pathName = window.location.pathname;
 	let menuName = '';
+	const checkENG = pathName.indexOf('/en/') > -1;
+	let categoryName = [];
+	const moreBtnText = checkENG === false ? '더보기' : 'See more';
+
 	// 서브페이지 확인
 	if (pathName.indexOf('performance') > -1) {
 		menuName = 'performance';
@@ -42,23 +45,41 @@ function boardConDomSet() {
 	}
 	
 	if (menuName === 'performance') {
-		inTitle = ['일시','장소', '관람료'];
+		if (checkENG === false) {
+			inTitle = ['일시','장소', '관람료'];
+		} else {
+			inTitle = ['Time','Venue', 'Ticket Price'];
+		}
+		categoryName[0] = checkENG === false ? '대표공연' : 'Brand';
+		categoryName[1] = checkENG === false ? '정기공연' : 'Regular';
+		categoryName[2] = checkENG === false ? '기획공연' : 'Special';
+		categoryName[3] = checkENG === false ? '상설공연' : 'Permanent';
+		categoryName[4] = checkENG === false ? '명절공연' : 'Seasonal';
+		categoryName[5] = checkENG === false ? '교류공연' : 'Exchange';
 	} else if (menuName === 'education') {
-		inTitle = ['대상','강사', '수강료'];
+		if (checkENG === false) {
+			inTitle = ['대상','강사', '수강료'];
+		} else {
+			inTitle = ['Learner','Instructor', 'Fee'];
+		}
+		categoryName[0] = checkENG === false ? '교육전문가' : 'Educational expert';
+		categoryName[1] = checkENG === false ? '일반인' : 'Ordinary person';
+		categoryName[2] = checkENG === false ? '청소년' : 'Teenager';
+		categoryName[3] = checkENG === false ? '외국인' : 'Foreigner';
 	}
 
 	for (let i = 0; i < schedule.length; i++) {
-		if (schedule[i].category == '대표공연' || schedule[i].category == '교육전문가'){
+		if (schedule[i].category == categoryName[0]){
 			boardType = 'type1';
-		} else if (schedule[i].category == '정기공연' || schedule[i].category == '일반인'){
+		} else if (schedule[i].category == categoryName[1]){
 			boardType = 'type2';
-		} else if (schedule[i].category == '기획공연' || schedule[i].category == '청소년'){
+		} else if (schedule[i].category == categoryName[2]){
 			boardType = 'type3';
-		} else if (schedule[i].category == '상설공연' || schedule[i].category == '외국인'){
+		} else if (schedule[i].category == categoryName[3]){
 			boardType = 'type4';
-		} else if (schedule[i].category == '명절공연'){
+		} else if (schedule[i].category == categoryName[4]){
 			boardType = 'type5';
-		} else if (schedule[i].category == '교류공연'){
+		} else if (schedule[i].category == categoryName[5]){
 			boardType = 'type6';
 		}
 
@@ -85,7 +106,7 @@ function boardConDomSet() {
 						<dt>${inTitle[2]}</dt>
 						<dd>${schedule[i].inTit3}</dd>
 					</dl>
-					<a class="link-more" href="${schedule[i].link}?month=${currentMonth}&dayPage">더보기</a>
+					<a class="link-more" href="${schedule[i].link}?month=${currentMonth}&dayPage">${moreBtnText}</a>
 				</div>
 			</div>
 		</li>`;

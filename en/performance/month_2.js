@@ -19,6 +19,6 @@ let schedule = [
 		inTit1: '1월 7일, 14일, 28일, 매주 토요일 15:00',
 		inTit2: '연악당',
 		inTit3: 'S석 10,000원 A석 8,000원',
-		link: '0204.html'
+		link: '0107.html'
 	},
 ];

@@ -67,8 +67,8 @@ footer .logo-bottom {position: absolute;right:0;top:4px;}
 
 /* sub */
 .sub-section {width:100%;max-width: var(--max-wrap);border-top:1px solid #00000050;margin: 0 auto 50px;}
-.sub-section .top-area {position: relative;padding: 60px 60px 10px 350px;min-height: 100px;box-sizing: border-box;}
-.sub-section .top-area .month-num {font-size: 80px;font-family: 'Helvetica';position: absolute;left:108px;top:10px;}
+.sub-section .top-area {position: relative;padding: 80px 60px 20px 350px;min-height: 100px;box-sizing: border-box;}
+.sub-section .top-area .month-num {font-size: 100px;font-family: 'Helvetica';position: absolute;left:108px;top:20px;}
 .sub-section .top-area .category-menu {position: relative;}
 .sub-section .top-area .category-menu .in-wrap {width:100%;}
 .sub-section .top-area .category-menu .btn-category {height: 30px;width: 110px;border:1px solid #00000050;border-radius: 15px;margin-bottom: 10px;font-size: 12px;font-weight: bold;position: relative;}
@@ -111,7 +111,7 @@ footer .logo-bottom {position: absolute;right:0;top:4px;}
 .sub-section .board-area .board-con .bot-con .table-con {padding-left: 240px;}
 .sub-section .board-area .board-con .bot-con .table-con dl {display:flex;margin-bottom: 12px;}
 .sub-section .board-area .board-con .bot-con .table-con dt {width: 140px;font-weight: bold;}
-.sub-section .board-area .board-con .bot-con .link-more {display: inline-block;width:100px;line-height: 30px;text-align: center;border-radius: 15px;font-size: 12px;border:1px solid #000000;font-weight: bold;}
+.sub-section .board-area .board-con .bot-con .link-more {display: inline-block;width:100px;line-height: 30px;text-align: center;border-radius: 15px;font-size: 12px;border:1px solid #000000;font-weight: bold;margin: 20px 0 30px;}
 .sub-section .board-area .board-con.on .bot-con {display: block;}
 .sub-section .board-area .board-con.off {display: none;}
 
