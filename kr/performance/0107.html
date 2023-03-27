@@ -4,35 +4,19 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/x-icon" href="../images//common/favicon.ico">
-	<link rel="stylesheet" href="../css/common.css">
+	<link rel="icon" type="image/x-icon" href="../../asset/images/common/favicon.ico">
+	<link rel="stylesheet" href="../../asset/css/common.css">
 	<title>국립부산국악원</title>
-
-	<script src="../js/common.js"></script>
-	<script src="../js/sub.js"></script>
+	<script src="../../asset/js/common.js"></script>
+	<script src="../../asset/js/sub.js"></script>
 </head>
 <body class="sub">
 <!-- /inc/header.html -->
 <header id="header"></header>
 <main class="sub-section">
-	<div class="top-area">
-		<div class="month-num"></div>
-		<nav class="category-menu">
-			<div class="in-wrap">
-				<button class="btn-category all" onclick="sortCategory('all', this)">전체</button>
-				<button class="btn-category type1" onclick="sortCategory('type1', this)">대표공연</button>
-				<button class="btn-category type2" onclick="sortCategory('type2', this)">정기공연</button>
-				<button class="btn-category type3" onclick="sortCategory('type3', this)">기획공연</button>
-				<button class="btn-category type4" onclick="sortCategory('type4', this)">상설공연</button>
-				<button class="btn-category type5" onclick="sortCategory('type5', this)">명절공연</button>
-				<button class="btn-category type6" onclick="sortCategory('type6', this)">교류공연</button>
-			</div>
-		</nav>
-		<a class="link-month link-prev" href=""><img src="../images/common/btn_prev.png" alt="prev month"></a>
-		<a class="link-month link-next" href=""><img src="../images/common/btn_next.png" alt="next month"></a>
+	<div class="inpage-top">
+		<a class="btn-back" href="javascript:history.back()"><img src="../../asset/images/common/btn_back.png" alt="back"></a>
 	</div>
-
-
 
 	<!--
 		페이지의 카테고리(태그)에 따라 
@@ -43,11 +27,10 @@
 		상설공연 = type4
 		명절공연 = type5
 		교류공연 = type6
-		예: 기획공연일 경우 <article class="board-content performance-content type3">
-			performance-content는 메뉴에 따라 다르게 표시됨
+		예: 기획공연일 경우 <article class="board-content type3">
 	-->
 	<!-- 날짜별 페이지 컨텐츠 -->
-	<article class="board-content performance-content type3">
+	<article class="board-content type3">
 		<!-- 좌측 영역 (상세정보) -->
 		<div class="left-area">
 			<!-- 게시물의 제목 -->
@@ -102,9 +85,9 @@
 
 		<!-- 우측 영역 (이미지) -->
 		<div class="right-area">
-			<img src="../images/performance/0107_1.jpg" alt="">
-			<img src="../images/performance/0107_2.jpg" alt="">
-			<img src="../images/performance/0107_3.jpg" alt="">
+			<img src="../../asset/images/performance/0107_1.jpg" alt="">
+			<img src="../../asset/images/performance/0107_2.jpg" alt="">
+			<img src="../../asset/images/performance/0107_3.jpg" alt="">
 		</div>
 
 	</article>

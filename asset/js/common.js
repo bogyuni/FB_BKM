@@ -58,15 +58,16 @@ window.addEventListener('DOMContentLoaded', function(){
 
 });
 
-window.addEventListener('load', function(){
-	const checkENG = window.location.pathname.indexOf('/en/') > -1;
-	if (checkENG === true) {
-		let imgTag = document.getElementsByTagName('img');
-		for (let i = 0; i < imgTag.length; i++) {
-			imgTag[i].src = imgTag[i].src.split('/en')[0] + imgTag[i].src.split('/en')[1];
-		}
-	}
-});
+// 하위 폴더 이미지 경로 수정
+// window.addEventListener('load', function(){
+// 	const checkENG = window.location.pathname.indexOf('/en/') > -1;
+// 	if (checkENG === true) {
+// 		let imgTag = document.getElementsByTagName('img');
+// 		for (let i = 0; i < imgTag.length; i++) {
+// 			imgTag[i].src = imgTag[i].src.split('/en')[0] + imgTag[i].src.split('/en')[1];
+// 		}
+// 	}
+// });
 
 function openGnb(){
 	document.querySelector('.mo-menu').classList.add('on');

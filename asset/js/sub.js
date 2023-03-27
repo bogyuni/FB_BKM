@@ -16,10 +16,10 @@ window.addEventListener('load', function(){
 	// 월 표시
 	const currentMonth = parseInt(window.location.search.split('month=')[1]);
 	const monthNum = document.getElementsByClassName('month-num')[0];
-	monthNum.innerHTML = currentMonth;
 
 	if (checkDayPage === false) {
 		// 다음 월, 이전 월 링크 세팅
+		monthNum.innerHTML = currentMonth;
 		const linkNext = document.getElementsByClassName('link-next')[0];
 		const linkPrev = document.getElementsByClassName('link-prev')[0];
 		const path = window.location.origin + window.location.pathname;
@@ -27,11 +27,6 @@ window.addEventListener('load', function(){
 		const prevMonth = currentMonth == 1 ? 12 : currentMonth - 1;
 		linkNext.href = path+'?month=' + nextMonth;
 		linkPrev.href = path+'?month=' + prevMonth;
-	} else {
-		const linkNext = document.getElementsByClassName('link-next')[0];
-		const linkPrev = document.getElementsByClassName('link-prev')[0];
-		linkNext.href = '';
-		linkPrev.href = '';
 	}
 });
 
