@@ -71,7 +71,7 @@ footer .logo-bottom {position: absolute;right:0;top:4px;}
 .sub-section .top-area .month-num {font-size: 100px;font-family: 'Helvetica';position: absolute;left:108px;top:20px;}
 .sub-section .top-area .category-menu {position: relative;}
 .sub-section .top-area .category-menu .in-wrap {width:100%;}
-.sub-section .top-area .category-menu .btn-category {height: 30px;width: 110px;border:1px solid #00000050;border-radius: 15px;margin-bottom: 10px;font-size: 12px;font-weight: bold;position: relative;}
+.sub-section .top-area .category-menu .btn-category {height: 30px;min-width: 110px;border:1px solid #00000050;border-radius: 15px;margin-bottom: 10px;font-size: 12px;font-weight: bold;position: relative;padding: 0 10px;}
 .sub-section .top-area .category-menu .btn-category.on {color: #fff;}
 .sub-section .top-area .category-menu .btn-category::after {content:'';display: inline-block;width:7px;height: 7px;border-radius: 50%;background: #fff;vertical-align: middle;margin-bottom: 3px;margin-left: 4px;}
 .sub-section .top-area .category-menu .btn-category.on::after {background: #fff !important;}
@@ -158,6 +158,11 @@ footer .logo-bottom {position: absolute;right:0;top:4px;}
 .month-table-wrap .cap-cell {width:20%;font-weight: bold;}
 .month-table-wrap .det-cell {width:60%;}
 .month-table-wrap .type2 {width: 80%;}
+.month-table-wrap .eng-cell-wrap {width: 80%;}
+.month-table-wrap .eng-cell-wrap .cap-cell {width:auto;display: inline;}
+.month-table-wrap .eng-cell-wrap .det-cell {width:auto;display: inline;}
+
+
 
 .type1 .month-table-wrap .month-con,
 .type1 .month-table-wrap .day-cell {color: #00DB00;}
@@ -172,6 +177,33 @@ footer .logo-bottom {position: absolute;right:0;top:4px;}
 .type6 .month-table-wrap .month-con,
 .type6 .month-table-wrap .day-cell {color: #FF7900;}
 
+
+/* tickets */
+.tickets .top-area {padding-left:0;padding-right:0;border:var(--bdr);text-align: center;}
+.tickets .tab-menu {display: inline-block;}
+.tickets .tab-menu .btn-tab {min-width: 130px;height: 30px;border-radius: 15px;border:1px solid #00000050;font-size: 12px;font-weight: bold;}
+.tickets .tab-menu .btn-tab.on {background: #246FFD;color: #fff;}
+.tickets-content {padding:0 100px;overflow: hidden;border-top:1px solid #00000050;border-bottom:1px solid #00000050;}
+.tickets-content {padding:0 100px;overflow: hidden;border-top:1px solid #00000050;border-bottom:1px solid #00000050;}
+.tickets-content > div {box-sizing: border-box;width: 50%;float: left;padding-top: 140px;padding-bottom: 40px;position: relative;}
+.tickets-content .left-area {border-right:1px solid #00000025;padding-right: 5%;}
+.tickets-content .right-area {padding-left: 5%;border-left:1px solid #00000025;margin-left: -1px;}
+.tickets-content .right-area img {max-width: 100%;margin-bottom: 0.5em;}
+.tickets-content h2 {font-size: 32px;font-weight: bold;position: absolute;top:20px;}
+.tickets-content h3 {font-size: 17px;font-weight: bold;color: #246FFD;padding-bottom: 16px;}
+.tickets-content h4 {font-size: 25px;font-weight: bold;margin-bottom: 20px;border-top:1px solid #00000050;padding-top: 6px;}
+.tickets-content .table-wrap {margin-bottom: 80px;margin-top: 30px;}
+.tickets-content .table-wrap .row-con {display: flex;}
+.tickets-content .table-wrap .col-con {padding: 6px 0 18px;border-top:1px solid #00000050;font-size: 17px;}
+.tickets-content .table-wrap .col-con:nth-child(1) {width: 27%;margin-right: 3%;}
+.tickets-content .table-wrap .col-con:nth-child(2) {width: 70%;}
+.tickets-content section .cap {border-top:1px solid #00000050;padding-top: 16px;white-space: pre-line;}
+
+.tickets1 .right-area .table-wrap {margin-bottom: 80px;}
+.tickets1 .right-area .col-con {border:0;padding-bottom: 2px;}
+.tickets1 .right-area .col-con:nth-child(1) {font-weight: bold;}
+.tickets1 .right-area .row-con:first-child .col-con {border-top:1px solid #00000050;}
+.tickets1 .right-area .img-con {padding-top: 16px;}
 
 
 
@@ -233,8 +265,13 @@ footer .logo-bottom {position: absolute;right:0;top:4px;}
 
 	.board-content {padding: 0;}
 	.board-content .left-area {border: 0;float: none;width: auto;padding: 30px;}
+	.board-content .right-area {width: auto;padding: 30px;}
 	.board-content .page-title {font-size: 30px;line-height: 1;}
 	.board-content .table-wrap dl dt {width: 40%;}
 	.board-content .table-wrap dl dd {width: 60%;}
-	.board-content .right-area {width: auto;padding: 30px;}
+
+	.tickets-content {padding: 0;}
+	.tickets-content .left-area {border: 0;float: none;width: auto;padding: 30px;}
+	.tickets-content .right-area {width: auto;padding: 30px;}
+
 }
