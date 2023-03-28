@@ -28,6 +28,7 @@ li {list-style: none;}
 /* header */
 header .inner-wrap {height: 95px;}
 header .main-logo {position: absolute;left:30px;top:30px;}
+header .main-logo .mo {display: none;}
 header .link-lan {position: absolute;right:30px;top:30px;border:1px solid #000;border-radius: 10px;line-height: 20px;text-align: center;width: 40px;font-size: 8px;font-weight: bold;}
 header .btn-open-menu {display: none;}
 header .mo-menu {display: none;}
@@ -179,35 +180,62 @@ footer .logo-bottom {position: absolute;right:0;top:4px;}
 
 
 /* tickets */
-.tickets .top-area {padding-left:0;padding-right:0;border:var(--bdr);text-align: center;}
+.tickets .top-area {padding-left:0;padding-right:0;text-align: center;}
 .tickets .tab-menu {display: inline-block;}
 .tickets .tab-menu .btn-tab {min-width: 130px;height: 30px;border-radius: 15px;border:1px solid #00000050;font-size: 12px;font-weight: bold;}
 .tickets .tab-menu .btn-tab.on {background: #246FFD;color: #fff;}
-.tickets-content {padding:0 100px;overflow: hidden;border-top:1px solid #00000050;border-bottom:1px solid #00000050;}
-.tickets-content {padding:0 100px;overflow: hidden;border-top:1px solid #00000050;border-bottom:1px solid #00000050;}
+.tickets-content {padding:0 100px;overflow: hidden;border-top:1px solid #00000050;border-bottom:1px solid #00000050;display: none;}
+.tickets-content.on {display: block;}
 .tickets-content > div {box-sizing: border-box;width: 50%;float: left;padding-top: 140px;padding-bottom: 40px;position: relative;}
 .tickets-content .left-area {border-right:1px solid #00000025;padding-right: 5%;}
 .tickets-content .right-area {padding-left: 5%;border-left:1px solid #00000025;margin-left: -1px;}
 .tickets-content .right-area img {max-width: 100%;margin-bottom: 0.5em;}
-.tickets-content h2 {font-size: 32px;font-weight: bold;position: absolute;top:20px;}
-.tickets-content h3 {font-size: 17px;font-weight: bold;color: #246FFD;padding-bottom: 16px;}
-.tickets-content h4 {font-size: 25px;font-weight: bold;margin-bottom: 20px;border-top:1px solid #00000050;padding-top: 6px;}
+.tickets-content * {font-size: 17px;}
+.tickets-content h2 {font-size: 32px;position: absolute;top:20px;}
+.tickets-content h3 {font-weight: bold;color: #246FFD;padding-bottom: 16px;}
+.tickets-content h4 {font-size: 25px;font-weight: bold;margin-bottom: 20px;border-top:1px solid #000000;padding-top: 6px;}
 .tickets-content .table-wrap {margin-bottom: 80px;margin-top: 30px;}
 .tickets-content .table-wrap .row-con {display: flex;}
-.tickets-content .table-wrap .col-con {padding: 6px 0 18px;border-top:1px solid #00000050;font-size: 17px;}
+.tickets-content .table-wrap .col-con {padding: 6px 0 18px;border-top:1px solid #000000;}
 .tickets-content .table-wrap .col-con:nth-child(1) {width: 27%;margin-right: 3%;}
 .tickets-content .table-wrap .col-con:nth-child(2) {width: 70%;}
-.tickets-content section .cap {border-top:1px solid #00000050;padding-top: 16px;white-space: pre-line;}
+.tickets-content section .cap {border-top:1px solid #000000;padding-top: 16px;white-space: pre-line;}
+.tickets-content .link-con {display: inline-block;height: 50px;line-height: 50px;padding: 0 20px;font-weight: bold;border-radius: 25px;color: #fff;background: #000;}
+.tickets-content hr {border:0;border-top:1px solid #000;}
 
 .tickets1 .right-area .table-wrap {margin-bottom: 80px;}
 .tickets1 .right-area .col-con {border:0;padding-bottom: 2px;}
 .tickets1 .right-area .col-con:nth-child(1) {font-weight: bold;}
-.tickets1 .right-area .row-con:first-child .col-con {border-top:1px solid #00000050;}
+.tickets1 .right-area .row-con:first-child .col-con {border-top:1px solid #000000;}
 .tickets1 .right-area .img-con {padding-top: 16px;}
+.tickets2 .vis-wrap {display: flex;margin-bottom: 80px;}
+.tickets2 .vis-con {width: 33.3%;box-sizing: border-box;padding-right: 20px;}
+.tickets2 .vis-con img {display: block;margin-bottom: 20px;}
+.tickets2 .vis-con p {white-space: pre-line;color: #246FFD;font-weight: bold;}
+.tickets2 .right-area .col-con {font-weight: bold;}
+.tickets2 .right-area .col-con p {margin-bottom: 20px;}
+.tickets2 .right-area .col-con img {margin-bottom: 20px;display: block;}
+.tickets2 .right-area .col-con hr {margin-bottom: 10px;}
+.tickets3 section {margin-bottom: 70px;}
+.tickets3 section .cap {margin-bottom: 20px;}
+.tickets3 .call-con {padding: 20px 0 10px 80px;}
+.tickets3 .call-con strong {display: block;}
+.tickets3 .call-con.con1 {background: url(../images/tickets/ico-con4.png) no-repeat left;}
+.tickets3 .call-con.con2 {background: url(../images/tickets/ico-con5.png) no-repeat left;}
+.tickets3 .dc-con {position: relative;padding: 6px 10px 10px 70px;border-top:1px solid #000000;margin-bottom: 10px;}
+.tickets3 .dc-num {position: absolute;left: 0;font-weight: bold;}
+.tickets4 .right-area hr {margin-bottom: 20px;}
+.tickets4 .right-area .cap {border:0;}
+.tickets4 .right-area .cap span {display: inline-block;width: 10px;}
+
+
+
 
 
 
 @media screen and (max-width:768px) {
+	header .main-logo .pc {display: none;}
+	header .main-logo .mo {display: inline-block;}
 	header .link-lan {line-height: 28px;border-radius: 14px;width: 50px;font-size: 12px;right:90px;}
 	header .btn-open-menu {display: block;position: absolute;right:30px;top:34px;}
 	header .mo-menu.on {display: block;position: fixed;left:0;top:0;width:100%;height: 100%;z-index: 10;background: #fff;}
@@ -226,7 +254,7 @@ footer .logo-bottom {position: absolute;right:0;top:4px;}
 	footer .logo-bottom {display: none;}
 
 	.menu-schedule {width:50%;}
-	.menu-schedule .img-off {opacity: 0;}
+	/* .menu-schedule .img-off {opacity: 0;} */
 
 	.sub-section .top-area {padding:2em 0;}
 	.sub-section .top-area .month-num {position: static;text-align: center;}
@@ -238,6 +266,14 @@ footer .logo-bottom {position: absolute;right:0;top:4px;}
 	.sub-section .inpage-top {padding-right:30px;}
 
 	.sub-section .board-area .board-con {padding-left: 30px;overflow: hidden;}
+
+	.tickets .top-area {padding-top: 3em;}
+	.tickets-content {padding: 0 20px;}
+	.tickets-content * {font-size: 15px;}
+	.tickets-content h2 {font-size: 26px;}
+	.tickets-content h4 {font-size: 20px;}
+	.tickets-content .left-area {padding-right: 3%;}
+	.tickets2 .vis-con {padding-right: 0;margin-right: 10px;}
 }
 
 @media screen and (max-width:430px) {
@@ -270,8 +306,16 @@ footer .logo-bottom {position: absolute;right:0;top:4px;}
 	.board-content .table-wrap dl dt {width: 40%;}
 	.board-content .table-wrap dl dd {width: 60%;}
 
-	.tickets-content {padding: 0;}
+	.tickets .top-area {padding:20px 0 0;}
+	.tickets-content {padding: 0;border:0;}
 	.tickets-content .left-area {border: 0;float: none;width: auto;padding: 30px;}
 	.tickets-content .right-area {width: auto;padding: 30px;}
+	.tickets-content h2 {position: static;margin-bottom: 60px;}
 
+	.tickets .tab-menu {white-space: nowrap;overflow: auto;width: 100%;padding-bottom: 20px;}
+	.tickets .tab-menu .btn-tab {margin:0 0 10px;}
+	.tickets .tab-menu .btn-tab:first-child {margin-left: 20px;}
+	.tickets .tab-menu .btn-tab:last-child {margin-right: 20px;}
+	.tickets2 .vis-con {margin-right: 0;width: 40%;}
+	.tickets2 .vis-con:last-child {width: 30%;}
 }
