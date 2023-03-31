@@ -6,9 +6,7 @@
 	font-style: normal;
 	font-weight: 400;
 	font-display: auto;
-	src: local('Helvetica'),
-	url('HelveticaNeueLTStd-LtEx.woff') format('woff'),
-	url('Helvetica.ttf') format('truetype');
+	src: url('HelveticaNeueLTStd-LtEx.woff') format('woff');
 }
 :root {
 	--bdr: 1px solid red;
