@@ -299,9 +299,9 @@ footer .logo-bottom {position: absolute;right:0;top:4px;}
 	.sub-section .top-area .link-month img {width: 15px;}
 	.sub-section .board-area .board-con {padding-right: 0;}
 	.sub-section .board-area .board-con .top-con .day-con {width: 34px;}
-	.sub-section .board-area .board-con .top-con .week-con {width: 50px;}
-	.sub-section .board-area .board-con .top-con .category-con {width: 56px;}
-	.sub-section .board-area .board-con .top-con .title-con {width:calc(100% - 140px);font-size: 23px;}
+	.sub-section .board-area .board-con .top-con .week-con {width: 46px;font-size: 12px;}
+	.sub-section .board-area .board-con .top-con .category-con {width: 70px;font-size: 12px;}
+	.sub-section .board-area .board-con .top-con .title-con {width:calc(100% - 150px);font-size: 23px;}
 	.sub-section .board-area .board-con .bot-con {padding-right: 30px;}
 	.sub-section .board-area .board-con .bot-con .table-con {padding: 0;}
 	.sub-section .board-area .board-con .bot-con .table-con dt {width: 100px;}

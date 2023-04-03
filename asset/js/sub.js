@@ -1,8 +1,11 @@
 window.addEventListener('scroll', function(){
-	if (this.scrollY > 95) {
-		this.document.querySelector('.inpage-top').classList.add('toTop');
-	} else {
-		this.document.querySelector('.inpage-top').classList.remove('toTop');
+	const inPageTop = this.document.querySelector('.inpage-top');
+	if (inPageTop != null) {
+		if (this.scrollY > 95) {
+			inPageTop.classList.add('toTop');
+		} else {
+			inPageTop.classList.remove('toTop');
+		}
 	}
 });
 
