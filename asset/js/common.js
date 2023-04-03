@@ -50,6 +50,7 @@ window.addEventListener('DOMContentLoaded', function(){
 			if (menuName !== ''){
 				document.querySelector('.' + menuName + '-link').classList.add('on');
 			}
+			linkCurrentMonthSet();
 		});
 	fetch(pathFooter)
 		.then(response => { return response.text(); })
@@ -57,6 +58,19 @@ window.addEventListener('DOMContentLoaded', function(){
 
 
 });
+
+
+function linkCurrentMonthSet() {
+	const currentMonth = new Date().getMonth() + 1;
+	const performanceLink = document.querySelectorAll('.performanceLink');
+	const educationLink = document.querySelectorAll('.educationLink');
+
+	for (let i = 0; i < performanceLink.length; i++) {
+		performanceLink[i].href = performanceLink[i].href + currentMonth;
+		educationLink[i].href = educationLink[i].href + currentMonth;
+	}
+}
+
 
 // 하위 폴더 이미지 경로 수정
 // window.addEventListener('load', function(){
